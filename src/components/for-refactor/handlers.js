@@ -1,5 +1,3 @@
-(function() {
-
   var form = document.querySelector('.form-request');
   var inputName = document.querySelector('#car-name-field');
   var carYear = document.querySelector('#car-year-field');
@@ -7,9 +5,7 @@
   var carStatus = document.querySelector('#status');
   var carDiscription = document.querySelector('#car-discription-field');
   var radioButtons = document.querySelectorAll('.radio-wrap input');
-  var tableHead = document.querySelector('.table thead');
-  var tableBody = document.querySelector('.table tbody');
-  var buttonSpinner = document.querySelector('.spinner__button-loader')
+  var buttonSpinner = document.querySelector('.spinner__button-loader');
   var sendButton = document.querySelector('.button');
 
   var DelayInMsec = {
@@ -127,12 +123,8 @@
     }
   }
 
-  console.dir(Button)
-
   window.handlers = {
     addHandlerToDeleteButton: addHandlerToDeleteButton,
     toogleEmptyMessage: toogleEmptyMessage,
     addHandlerToToggleEmptyMessage: addHandlerToToggleEmptyMessage
   };
-
-})();

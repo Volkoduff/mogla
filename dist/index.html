@@ -23,90 +23,13 @@
             <h1 class="form-title">
 				¡Ay caramba!
 			</h1>
-            <form class="form-request" action="#" autocomplete="off">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="input-wrap">
-                            <label class="input-wrap__label" for="car-name-field">Название</label>
-                            <input class="input-wrap__input" type="text" name="name" id="car-name-field" maxlength="40" placeholder="Название" required>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-6">
-                        <div class="input-wrap">
-                            <label class="input-wrap__label" for="car-year-field">Год</label>
-                            <input class="input-wrap__input" placeholder="Год" type="number" name="year" id="car-year-field" min="1990" max="2019" data-placeholder="Год" required>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-6">
-                        <div class="input-wrap">
-                            <label class="input-wrap__label" for="car-price-field">Цена</label>
-                            <input class="input-wrap__input" type="number" name="price" id="car-price-field" placeholder="Цена" step="1000" required>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="input-wrap input-wrap__full-width">
-                            <label class="input-wrap__label" for="car-discription-field">Описание</label>
-                            <input class="input-wrap__input_discription input-wrap__input" type="text" name="discription" maxlength="100" id="car-discription-field" placeholder="Описание" required>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="radio-wrap">
-                            <span class="radio-title">Цвет</span>
-                            <input type="radio" class="radio-wrap__input radio-wrap__input_white" name="color" value="white" data-color='white' id="white" checked>
-                            <label for="white"></label>
-                            <input type="radio" class="radio-wrap__input radio-wrap__input_black" name="color" id="black" value="black">
-                            <label for="black"></label>
-                            <input type="radio" class="radio-wrap__input radio-wrap__input_gray" name="color" id="gray" value="gray">
-                            <label for="gray"></label>
-                            <input type="radio" class="radio-wrap__input radio-wrap__input_red" name="color" id="red" value="red">
-                            <label for="red"></label>
-                            <input type="radio" class="radio-wrap__input radio-wrap__input_green" name="color" id="green" value="green">
-                            <label for="green"></label>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-6">
-                        <select class="select" name="status" id="status">
-                            <option value="" disabled selected>
-                                Статус
-                            </option>
-                            <option value="in_stock">
-                                В наличии
-                            </option>
-                            <option value="pending">
-                                Ожидается
-                            </option>
-                            <option value="out_of_stock">
-                                Нет в наличии
-                            </option>
-                        </select>
-                    </div>
-                    <div class="col-sm-4 col-6">
-                        <div class="spinner spinner__button-loader hidden" role="status">
-                          <span class="sr-only">Загрузка...</span>
-                        </div>
-                        <button class="button" type="submit">Отправить</button>
-                    </div>
-                </div>
-            </form>
+
         </div>
     </section>
     <section class="car-list">
         <div class="container">
             <h2 class="table-title">Автомобили в наличии</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class="title-column">Название</th>
-                        <th class="year-column">Год</th>
-                        <th class="color-column">Цвет</th>
-                        <th class="status-column">Статус</th>
-                        <th class="price-column">Цена</th>
-                        <th class="button-column"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+
         </div>
     </section>
     <footer class="footer">
@@ -115,11 +38,7 @@
             <span class="copyright__text">Десница тысячелетия и моллюск!</span>
         </div>
     </footer>
-<!--    <div class="loader">-->
-<!--        <div class="spinner spinner__page-loader" role="status">-->
-<!--          <span class="sr-only">Loading...</span>-->
-<!--        </div>-->
-<!--    </div>-->
+
     <template id="template-list-retina">
         <tr class="table-row">
             <td>
