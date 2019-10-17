@@ -31,11 +31,11 @@ button {
     padding-top: 8px;
 }
 .request {
-	padding: 68px 0 100px 0; 
+	padding: 68px 0 100px 0;
 }
 .form-title {
 	text-align: center;
-	font-size: d42px;
+	font-size: 42px;
 	margin-bottom: 60px;
 }
 .form-request {
@@ -51,7 +51,7 @@ button {
 .input-wrap__input,
 .radio-wrap,
 .select-main,
-.button, 
+.button,
 .jq-selectbox__select {
 	width: 100%;
 }
@@ -99,7 +99,7 @@ input:focus::-webkit-input-placeholder {
 input:focus:-moz-placeholder {
 	color:transparent;
 }
-input:focus::-moz-placeholder { 
+input:focus::-moz-placeholder {
 	color:transparent;
 }
 input:focus:-ms-input-placeholder {
@@ -129,7 +129,7 @@ input:focus:-ms-input-placeholder {
 }
 .radio-wrap__input + label {
   	position: relative;
-    padding: 0px 0px 0 20px;
+    padding: 0 0 0 20px;
     cursor: pointer;
     height: 20px;
     border-radius: 50%;
@@ -143,8 +143,8 @@ input:focus:-ms-input-placeholder {
 .radio-wrap__input_white + label {
 	margin-left: 3px;
 	background: #fff;
-	-webkit-box-shadow: 0px 0 0 1px #999;
-	        box-shadow: 0px 0 0 1px #999;
+	-webkit-box-shadow: 0 0 0 1px #999;
+	        box-shadow: 0 0 0 1px #999;
 }
 .radio-wrap__input_black + label {
 	background: #000;
@@ -159,21 +159,21 @@ input:focus:-ms-input-placeholder {
 	background: #88c504;
 }
 .radio-wrap__input:hover + label {
-	-webkit-box-shadow: 
-	0px 0 0 2px #c4092f,
-	0px 0 0 4px #fff,
-	0px 0 0 6px #c4092f;
-	        box-shadow: 
-	0px 0 0 2px #c4092f,
-	0px 0 0 4px #fff,
-	0px 0 0 6px #c4092f;
+	-webkit-box-shadow:
+	0 0 0 2px #c4092f,
+	0 0 0 4px #fff,
+	0 0 0 6px #c4092f;
+	        box-shadow:
+	0 0 0 2px #c4092f,
+	0 0 0 4px #fff,
+	0 0 0 6px #c4092f;
 	-webkit-transition: .1s ease;
 	-o-transition: .1s ease;
-	transition: .1s ease;	
+	transition: .1s ease;
 }
 .radio-wrap__input:checked + label {
-	-webkit-box-shadow: 0px 0 0 5px #c4092f;
-	        box-shadow: 0px 0 0 5px #c4092f;
+	-webkit-box-shadow: 0 0 0 5px #c4092f;
+	        box-shadow: 0 0 0 5px #c4092f;
 	-webkit-transition: .3s ease;
 	-o-transition: .3s ease;
 	transition: .3s ease;
@@ -214,10 +214,10 @@ select option[value=""][disabled] {
 	transition: .2s ease-in;
 }
 .button:hover {
-	-webkit-box-shadow: 
+	-webkit-box-shadow:
 	0 0 0 2px #fff,
 	0 0 0 4px #c4092f;
-	        box-shadow: 
+	        box-shadow:
 	0 0 0 2px #fff,
 	0 0 0 4px #c4092f;
 	-webkit-transition: .1s ease-out;
@@ -226,10 +226,10 @@ select option[value=""][disabled] {
 	outline: none;
 }
 .button:disabled {
-	-webkit-box-shadow: 
+	-webkit-box-shadow:
 	0 0 0 2px #fff,
 	0 0 0 4px #000;
-	        box-shadow: 
+	        box-shadow:
 	0 0 0 2px #fff,
 	0 0 0 4px #000;
 	background: #c4092f;
@@ -260,7 +260,7 @@ button:focus, button:active {
 }
 .table {
 	width: 100%;
-	border: none; 
+	border: none;
 	line-height: 40px;
 	border-collapse: collapse;
 	font-size: 15px;
@@ -269,9 +269,7 @@ button:focus, button:active {
 	margin-top: 30px;
 	-webkit-transition: .5s ease;
 	-o-transition: .5s ease;
-	transition: .5s ease;
 	overflow: hidden;
-	transition: 0.3s;
 }
 .table thead {
 	border-radius: 4px;
@@ -316,13 +314,27 @@ table th:last-child {
 .table-row__color {
 	padding-top: 12px;
 }
-.table-row__color-sircle {
-	background: #000;
+.table-row__circle {
 	border-radius: 50%;
 	display: block;
 	height: 20px;
 	width: 20px;
 	margin: auto;
+}
+.table-row__black-circle {
+	background: #000;
+}
+.table-row__white-circle {
+	background: #fff;
+}
+.table-row__gray-circle {
+	background: #cbcbcc;
+}
+.table-row__red-circle {
+	background: #c4092f;
+}
+.table-row__green-circle {
+	background: #88c504;
 }
 .table-row-title__additional-option {
 	font-size: 13px;
@@ -334,7 +346,7 @@ table th:last-child {
 	-o-text-overflow: ellipsis;
 	   text-overflow: ellipsis;
 }
-.table-row__button {
+.table-row__button-remove {
 	width: 88px;
 	height: 29px;
 	text-align: center;
@@ -343,7 +355,7 @@ table th:last-child {
 	border-radius: 25px;
 	background: transparent;
 }
-.table-row__button:hover {
+.table-row__button-remove:hover {
 	background: #282d30;
 	color: 	#fff;
 }
@@ -447,7 +459,7 @@ td.table-row__message {
 }
 
 /*tr {
-	transition: 
+	transition:
 		transformY 1s linear 0s,
 		opacity 1s linear 0s,
 		font-size 0.5s linear 0.5s;

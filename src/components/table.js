@@ -1,7 +1,6 @@
 import BaseComponent from "./base-component";
-import TableContent from "./table-content";
 
-
+const TABLE_TITLES = [`Название`, `Год`, `Цвет`, `Статус`, `Цена`, ``];
 const Status = {
   'pending': `Pending`,
   'out_of_stock': `Out of stock`,
@@ -12,38 +11,40 @@ export default class Table extends BaseComponent {
   constructor(data) {
     super();
     this._data = data;
-    this._tableContent = new TableContent(data);
+  }
+
+  _getMaskedPrice(price) {
+    const result = [];
+    price.toString().split('').reverse()
+      .forEach((number, i) => {
+        i % 3 === 0 ? result.push(`${number} `) : result.push(number);
+    });
+    return result.reverse().join('').concat(` &#8381`);
   }
 
   getTemplate() {
     return `<table class="table">
   <thead>
     <tr>
-      <th class="title-column">Название</th>
-      <th class="year-column">Год</th>
-      <th class="color-column">Цвет</th>
-      <th class="status-column">Статус</th>
-      <th class="price-column">Цена</th>
-      <th class="button-column"></th>
+        ${TABLE_TITLES.map((title) => `<th>${title}</th>`).join(``)}
     </tr>
     </thead>
-  <tbody>
-    ${this._data !== undefined ? this._data.map((element) => `<tr class="table-row">
+    <tbody>
+    ${this._data.length ? this._data.map((element) => `<tr class="table-row">
             <td>
                 <p class="table-row-title" data-id="${element.id}">${element.title}</p>
                 <span class="table-row-title__additional-option">${element.description}</span>
             </td>
             <td class="table-row__year">${element.year}</td>
-            <td class="table-row__color"><span class="table-row__color-circle"></span></td>
+            <td class="table-row__color"><span class="table-row__circle table-row__${element.color}-circle"></span></td>
             <td class="table-row__status">${Status[element.status]}</td>
-            <td class="table-row__price">${element.price}</td>
+            <td class="table-row__price">${this._getMaskedPrice(element.price)}</td>
             <td class="table-row__close">
-                <button type="button" class="table-row__button">Удалить</button>
+                <button type="button" class="table-row__button-remove" data-id="${element.id}">Удалить</button>
             </td>
-        </tr>`).join(``) : `<td>
-                <p>Автомобили в наличии отсутствуют</p>
-            </td>`}
-  </tbody>
+        </tr>`).join(``) : `<tr ><td colspan="6"><span>Автомобили в наличии отсутствуют</span>
+            </td></tr>`}
+    </tbody>
   </table>`
   };
 }
