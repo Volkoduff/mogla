@@ -22,7 +22,18 @@ export default class Table extends BaseComponent {
     return result.reverse().join('').concat(` &#8381`);
   }
 
-  getTemplate() {
+  _getMobileTemplate() {
+    return `<div>${this._data.map((element) => `<div class="table-row-mobile"><p class="table-row-title" data-id="${element.id}">${element.title}</p>
+              <span class="table-row__color-circle">${element.color}</span>
+              <span class="table-row__price">${element.price}</span>
+              <span class="table-row-title__additional-option">${element.description}</span>
+              <p class="table-row__year">${element.year}</p>
+              <p class="table-row__status">${element.status}</p>
+              <button type="button" class="table-row__button-remove" data-id="${element.id}">Удалить</button>
+            </div>`).join(``)}</div>`
+  }
+
+  _getRetinaTemplate() {
     return `<table class="table">
   <thead>
     <tr>
@@ -46,5 +57,10 @@ export default class Table extends BaseComponent {
             </td></tr>`}
     </tbody>
   </table>`
+  }
+
+  getTemplate() {
+    debugger
+    return `${screen.width > 800 ? this._getRetinaTemplate() : this._getMobileTemplate()}`
   };
 }
