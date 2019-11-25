@@ -11,8 +11,6 @@ export const createElement = (template) => {
   return newElement.firstChild;
 };
 
-export const capitalizeFirstLetter = (word) => word[0].toUpperCase() + word.slice(1);
-
 export const render = (container, element, position = Position.END) => {
   switch (position) {
     case Position.BEFORE:

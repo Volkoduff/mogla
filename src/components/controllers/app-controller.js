@@ -2,6 +2,12 @@ import {carsData} from './../mocks'
 import {Position, render, unrender} from './../utils';
 import MainForm from './../main-form';
 import Table from './../table';
+const doSomethingElse = () => {
+  console.log(`nextStep`)
+};
+const doSomething = () => {
+  console.log(`firstStep`)
+};
 
 const mainForm = new MainForm();
 const formTitle = document.querySelector(`.form-title`);
@@ -13,6 +19,13 @@ export default class AppController {
   }
 
   init() {
+
+    const promise = new Promise(doSomething);
+
+    promise.then(doSomethingElse());
+
+
+
     render(formTitle, mainForm.getElement(), Position.AFTER);
 
     mainForm.getElement().addEventListener(`submit`, (evt) => this._onSubmitDataChange(evt, this._carsData));
@@ -64,5 +77,8 @@ export default class AppController {
         .addEventListener(`click`, (evt) => this._onclickDelete(evt)));
 
     render(tableTitle, this._table.getElement(), Position.AFTER);
+
   }
 }
+
+
